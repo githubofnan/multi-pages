@@ -3,7 +3,7 @@
     <el-container>
       <el-header></el-header>
       <el-main>
-        <img alt="Vue logo" src="../../../assets/logo.png">
+        <img alt="Vue logo" src="../../../assets/img/logo.png">
       </el-main>
     </el-container>
   </div>

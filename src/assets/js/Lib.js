@@ -1,3 +1,4 @@
+import '@babel/polyfill'
 import Vue from 'vue'
 import {
   Message, Notification,
@@ -12,6 +13,8 @@ Vue.use(Col)
 Vue.use(Container)
 Vue.prototype.$message = Message;
 Vue.prototype.$notify = Notification;
+
+Vue.config.productionTip = false
 
 import C from './conf'
 import M from './util'

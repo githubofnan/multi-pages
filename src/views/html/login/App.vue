@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <span>this is login</span>
-    <img alt="Vue logo" src="../../../assets/logo.png">
+    <input type="file" @change="tapUpload">
+    <img alt="Vue logo" src="../../../assets/img/logo.png">
   </div>
 </template>
 
@@ -10,6 +11,14 @@ import Lib from '@/assets/js/Lib';
 export default {
   mounted () {
     console.log(Lib)
+  },
+  methods: {
+    async tapUpload (e) {
+      e = e || window.event;
+      // console.log(e.target)
+      let base = await Lib.M.getBase64Image(e.target.files[0])
+      console.log(base)
+    }
   }
 }
 </script>
