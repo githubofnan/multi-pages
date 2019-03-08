@@ -20,10 +20,13 @@ const getPages = () => {
     pageInfo['chunks'] = ['chunk-vendors', 'chunk-common', pathName[3]];
     pages[pathName[3]] = pageInfo;
   })
-  console.log(pages)
+  console.log(Object.keys(pages))
   return pages;
 }
 
 module.exports = {
-  pages: getPages()
+  pages: getPages(),
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '../../'
+    : '/'
 }

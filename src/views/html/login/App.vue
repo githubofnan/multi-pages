@@ -6,9 +6,11 @@
 </template>
 
 <script>
-
+import Lib from '@/assets/js/Lib';
 export default {
-  name: 'app',
+  mounted () {
+    console.log(Lib)
+  }
 }
 </script>
 

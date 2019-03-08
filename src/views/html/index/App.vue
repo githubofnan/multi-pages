@@ -1,14 +1,20 @@
 <template>
   <div id="app">
-    <span>this is index</span>
-    <img alt="Vue logo" src="../../../assets/logo.png">
+    <el-container>
+      <el-header></el-header>
+      <el-main>
+        <img alt="Vue logo" src="../../../assets/logo.png">
+      </el-main>
+    </el-container>
   </div>
 </template>
 
 <script>
-
+import Lib from '@/assets/js/Lib'
 export default {
-  name: 'app',
+  mounted () {
+    console.log(Lib)
+  }
 }
 </script>
 
